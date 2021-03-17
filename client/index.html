@@ -1,0 +1,42 @@
+<!--
+  PORTS:
+    Kim: 3003
+    Josh: 3001
+    Virginia: 3002
+    Phucci: 3004
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kim's IKEA Clone Proxy</title>
+  </head>
+<body>
+
+  <!-- will be able to render about service because there is render inside that file -->
+  <div id="about"></div>
+  <div id="aboutService"></div>
+  <div id="imageService"></div>
+  <div id="sizeService"></div>
+  <div id="reviewService"></div>
+
+</body>
+  <!-- Load React -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <!-- <script src="http://localhost:3001/bundle.js" crossorigin></script> -->
+  <!-- <script src="http://localhost:3002/bundle.js" crossorigin></script> -->
+  <script src="http://localhost:3003/dist/bundle.js" crossorigin></script>
+  <!-- <script src="http://localhost:3004/bundle.js" crossorigin></script> -->
+  <script>
+    // ReactDOM.render(React.createElement(Index), document.getElementById('reviewService'));
+    // ReactDOM.render(React.createElement(App), document.getElementById('sizeService'));
+
+    // the line below isn't actually rendering the react component, rather inside of my service there is a render which is what is rendering it
+    ReactDOM.render(React.createElement(About), document.getElementById("aboutService"));
+
+
+    // need imageService
+  </script>
+</html>
