@@ -1,42 +1,33 @@
-<!--
-  PORTS:
-    Kim: 3003
-    Josh: 3001
-    Virginia: 3002
-    Phucci: 3004
- -->
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Kim's IKEA Clone Proxy</title>
+    <link rel="stylesheet" type="text/css" href="http://localhost:3000/proxy-style.css" />
   </head>
 <body>
 
-  <!-- will be able to render about service because there is render inside that file -->
-  <div id="about"></div>
-  <div id="aboutService"></div>
-  <div id="imageService"></div>
-  <div id="sizeService"></div>
-  <div id="reviewService"></div>
-
+    <div id="imageService"></div>
+    <!-- about service will be rendered here because there is render inside bundled file -->
+    <div id="about"></div>
+    <div id="product-size"></div>
+    <!-- <div id="reviewService"></div> -->
 </body>
-  <!-- Load React -->
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+
+  <!-- REACT 16 -->
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-  <!-- <script src="http://localhost:3001/bundle.js" crossorigin></script> -->
-  <!-- <script src="http://localhost:3002/bundle.js" crossorigin></script> -->
-  <script src="http://localhost:3003/dist/bundle.js" crossorigin></script>
-  <!-- <script src="http://localhost:3004/bundle.js" crossorigin></script> -->
+
+  <!-- REACT 17 -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- <script src="http://localhost:3001/bundle.js" ></script> -->
+  <script src="http://localhost:3002/bundle.js" ></script>
+  <script src="http://localhost:3003/dist/bundle.js" ></script>
+  <script src="http://localhost:3004/index.js" ></script>
   <script>
-    // ReactDOM.render(React.createElement(Index), document.getElementById('reviewService'));
-    // ReactDOM.render(React.createElement(App), document.getElementById('sizeService'));
-
-    // the line below isn't actually rendering the react component, rather inside of my service there is a render which is what is rendering it
-    ReactDOM.render(React.createElement(About), document.getElementById("aboutService"));
-
-
-    // need imageService
+    ReactDOM.render(React.createElement(ImagesService), document.getElementById('imageService'));
+    // ReactDOM.render(React.createElement(Review), document.getElementById('reviewService'));
   </script>
 </html>

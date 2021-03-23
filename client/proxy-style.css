@@ -1,0 +1,14 @@
+#about {
+  width: 25%;
+  float: right;
+
+}
+#imageService{
+  width: 70%;
+  float: left;
+
+}
+#product-size{
+  clear: both;
+
+}
